@@ -1,3 +1,7 @@
+## 0.2.2
+
+* Fix `shape` for dialogs and fullscreen view
+
 ## 0.2.1
 
 * Fix no material widget found for adapive mode.
