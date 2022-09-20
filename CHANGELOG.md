@@ -1,5 +1,9 @@
 ## 0.1.4
 
+* Fix `shape` not applied because of `Scaffold` widget.
+
+## 0.1.4
+
 * add `useSafeArea` parametre to avoid padding for dialogs itself.
 
 ## 0.1.3

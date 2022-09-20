@@ -34,11 +34,7 @@ class DefaultDialog extends StatelessWidget {
             ? AdaptiveChild(
                 constraints: constraints,
                 shape: shape,
-                child: Scaffold(
-                  backgroundColor: backgroundColor,
-                  extendBody: true,
-                  body: child,
-                ),
+                child: child,
               )
             : AlertDialog(
                 backgroundColor: backgroundColor,
@@ -54,11 +50,7 @@ class DefaultDialog extends StatelessWidget {
       return AdaptiveChild(
         constraints: constraints,
         shape: shape,
-        child: Scaffold(
-          backgroundColor: backgroundColor,
-          extendBody: true,
-          body: child,
-        ),
+        child: child,
       );
     } else {
       return AlertDialog(
