@@ -12,6 +12,7 @@ class AdaptiveDialog {
     Color? backgroundColor,
     bool adaptive = true,
     bool barrierDismissible = true,
+    bool useSafeArea = true,
     ImageFilter? filter,
   }) async {
     if (constraints == null) {
@@ -31,6 +32,7 @@ class AdaptiveDialog {
     result = await showDialog<dynamic>(
       barrierDismissible: barrierDismissible,
       context: context,
+      useSafeArea: useSafeArea,
       builder: (BuildContext context) => DefaultDialog(
         adaptive: adaptive,
         barrierDismissible: barrierDismissible,
