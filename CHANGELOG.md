@@ -8,7 +8,7 @@
 
 ## 0.1.4
 
-* add `useSafeArea` parametre to avoid padding for dialogs itself.
+* add `useSafeArea` parameter to avoid padding for dialogs itself.
 
 ## 0.1.3
 
