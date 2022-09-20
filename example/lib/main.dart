@@ -36,19 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
     debugPrint('start');
     final result = await AdaptiveDialog.show(
       context: context,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('Hello World'),
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context, 'OK'),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
+      builder: (context) => Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text('Hello World'),
+          ElevatedButton(
+            onPressed: () => Navigator.pop(context, 'OK'),
+            child: const Text('OK'),
+          ),
+        ],
       ),
     );
     debugPrint('end: ${result.toString()}');

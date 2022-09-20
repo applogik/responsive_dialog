@@ -6,7 +6,7 @@ import 'default_dialog.dart';
 class AdaptiveDialog {
   static Future<dynamic> show({
     required BuildContext context,
-    required Widget child,
+    required Widget Function(BuildContext context) builder,
     ShapeBorder? shape,
     BoxConstraints? constraints,
     Color? backgroundColor,
@@ -38,7 +38,7 @@ class AdaptiveDialog {
         backgroundColor: backgroundColor,
         constraints: constraints,
         filter: filter,
-        child: child,
+        child: builder(context),
       ),
     );
 
