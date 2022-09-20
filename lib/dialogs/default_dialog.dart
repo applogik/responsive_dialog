@@ -36,15 +36,8 @@ class DefaultDialog extends StatelessWidget {
                 shape: shape,
                 child: Scaffold(
                   backgroundColor: backgroundColor,
-                  body: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 10,
-                      bottom: 20,
-                      left: 20,
-                      right: 20,
-                    ),
-                    child: child,
-                  ),
+                  extendBody: true,
+                  body: child,
                 ),
               )
             : AlertDialog(
@@ -63,15 +56,8 @@ class DefaultDialog extends StatelessWidget {
         shape: shape,
         child: Scaffold(
           backgroundColor: backgroundColor,
-          body: Padding(
-            padding: const EdgeInsets.only(
-              top: 10,
-              bottom: 20,
-              left: 20,
-              right: 20,
-            ),
-            child: child,
-          ),
+          extendBody: true,
+          body: child,
         ),
       );
     } else {
