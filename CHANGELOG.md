@@ -1,4 +1,8 @@
-## 0.1.4
+## 0.2.1
+
+* Fix no material widget found for adapive mode.
+
+## 0.2.0
 
 * Fix `shape` not applied because of `Scaffold` widget.
 
