@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'default_dialog.dart';
 
@@ -10,6 +12,7 @@ class AdaptiveDialog {
     Color? backgroundColor,
     bool adaptive = true,
     bool barrierDismissible = true,
+    ImageFilter? filter,
   }) async {
     if (constraints == null) {
       if (adaptive) {
@@ -24,7 +27,7 @@ class AdaptiveDialog {
     backgroundColor ??= Theme.of(context).dialogBackgroundColor;
 
     dynamic result;
-    
+
     result = await showDialog<dynamic>(
       barrierDismissible: barrierDismissible,
       context: context,
@@ -34,6 +37,7 @@ class AdaptiveDialog {
         shape: shape,
         backgroundColor: backgroundColor,
         constraints: constraints,
+        filter: filter,
         child: child,
       ),
     );
