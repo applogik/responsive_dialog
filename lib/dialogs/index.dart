@@ -17,10 +17,10 @@ Future<T?> showAdaptiveDialog<T>({
   if (constraints == null) {
     if (adaptive) {
       constraints =
-          const BoxConstraints(maxHeight: 600, minWidth: 400, minHeight: 400, maxWidth: 720);
+          const BoxConstraints(maxHeight: 600, minWidth: 400, maxWidth: 720);
     } else {
       constraints =
-          const BoxConstraints(maxHeight: 600, minWidth: 400, minHeight: 400, maxWidth: 678);
+          const BoxConstraints(maxHeight: 600, minWidth: 400, maxWidth: 678);
     }
   }
   shape ??= RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0));
