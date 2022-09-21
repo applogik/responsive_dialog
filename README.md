@@ -1,4 +1,4 @@
-# Adaptive Dialog
+# Responsive Dialog
 
 [![Version](https://img.shields.io/pub/v/responsive_dialog.svg)](https://pub.dev/packages/responsive_dialog)
 
