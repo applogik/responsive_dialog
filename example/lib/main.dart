@@ -1,4 +1,4 @@
-import 'package:adaptive_dialog/adaptive_dialog.dart';
+import 'package:responsive_dialog/responsive_dialog.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _openDialog() async {
     debugPrint('start');
-    final result = await showAdaptiveDialog<String>(
+    final result = await showResponsiveDialog<String>(
       context: context,
       builder: (context) => SizedBox(
         height: 400,

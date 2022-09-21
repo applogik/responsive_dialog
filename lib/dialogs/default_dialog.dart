@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:adaptive_dialog/dialogs/adaptive_child.dart';
+import 'package:responsive_dialog/dialogs/adaptive_child.dart';
 import 'package:flutter/material.dart';
 
 class DefaultDialog extends StatelessWidget {

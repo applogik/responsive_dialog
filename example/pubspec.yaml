@@ -9,7 +9,7 @@ environment:
   sdk: '>=2.18.1 <3.0.0'
 
 dependencies:
-  adaptive_dialog:
+  responsive_dialog:
     path: ../
   flutter:
     sdk: flutter  

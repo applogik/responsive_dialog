@@ -1,8 +1,8 @@
-name: adaptive_dialog
+name: responsive_dialog
 description: A new Flutter package project.
 version: 0.2.3
 homepage: https://www.app-logik.de/
-repository: https://github.com/applogik/adaptive_dialog
+repository: https://github.com/applogik/responsive_dialog
 
 environment:
   sdk: '>=2.18.1'

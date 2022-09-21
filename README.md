@@ -1,10 +1,10 @@
 # Adaptive Dialog
 
-[![Version](https://img.shields.io/pub/v/adaptive_dialog.svg)](https://pub.dev/packages/adaptive_dialog)
+[![Version](https://img.shields.io/pub/v/responsive_dialog.svg)](https://pub.dev/packages/responsive_dialog)
 
-An `AdaptiveDialog` helps you to always ship responsive and dynamic dialogs for the perfect user-experience! You decide the dimensions of your dialog and the `AdaptiveChild` takes care of whether to show your content like a simple dialog or a full-screen page.
+An `ResponsiveDialog` helps you to always ship responsive and dynamic dialogs for the perfect user-experience! You decide the dimensions of your dialog and the `AdaptiveChild` takes care of whether to show your content like a simple dialog or a full-screen page.
 
-![Example Dialog](https://github.com/applogik/adaptive_dialog/blob/main/assets/example.gif)
+![Example Dialog](https://github.com/applogik/responsive_dialog/blob/main/assets/example.gif)
 
 ## Options
 
@@ -22,19 +22,19 @@ An `AdaptiveDialog` helps you to always ship responsive and dynamic dialogs for 
 
 ## Getting started
 
-To use this package, add `adaptive_dialog` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/):
+To use this package, add `responsive_dialog` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/):
 
 ```yaml
 dependencies:
-  adaptive_dialog: ^0.2.3
+  responsive_dialog: ^0.2.3
 ```
 
 ## Usage
 
-Call `showAdaptiveDialog` with your desired type to return (if you want to return something).
+Call `showResponsiveDialog` with your desired type to return (if you want to return something).
 
 ```dart
-final result = await showAdaptiveDialog<String>(
+final result = await showResponsiveDialog<String>(
     context: context,
     builder: (context) => SizedBox(
     height: 400,
