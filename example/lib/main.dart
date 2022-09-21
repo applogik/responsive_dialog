@@ -34,19 +34,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _openDialog() async {
     debugPrint('start');
-    final result = await AdaptiveDialog.show(
+    final result = await showAdaptiveDialog<String>(
       context: context,
-      builder: (context) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text('Hello World'),
-          ElevatedButton(
-            onPressed: () => Navigator.pop(context, 'OK'),
-            child: const Text('OK'),
-          ),
-        ],
+      builder: (context) => SizedBox(
+        height: 400,
+        width: 600,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Hello World'),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context, 'OK'),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
       ),
     );
     debugPrint('end: ${result.toString()}');
