@@ -1,3 +1,8 @@
+## 0.2.3
+
+* Fix generics for `showAdaptiveDialog`
+* add first docs
+
 ## 0.2.2
 
 * Fix `shape` for dialogs and fullscreen view
