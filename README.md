@@ -4,7 +4,7 @@
 
 An `AdaptiveDialog` helps you to always ship responsive and dynamic dialogs for the perfect user-experience! You decide the dimensions of your dialog and the `AdaptiveChild` takes care of whether to show your content like a simple dialog or a full-screen page.
 
-![IconPicker](https://github.com/Ahmadre/FlutterIconPicker/blob/master/assets/FlutterIconPicker.png)
+![Example Dialog](https://github.com/applogik/adaptive_dialog/blob/main/assets/example.gif)
 
 ## Options
 
