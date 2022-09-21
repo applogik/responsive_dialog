@@ -1,39 +1,56 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Adaptive Dialog
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![Version](https://img.shields.io/pub/v/adaptive_dialog.svg)](https://pub.dev/packages/adaptive_dialog)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+An `AdaptiveDialog` helps you to always ship responsive and dynamic dialogs for the perfect user-experience! You decide the dimensions of your dialog and the `AdaptiveChild` takes care of whether to show your content like a simple dialog or a full-screen page.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+![IconPicker](https://github.com/Ahmadre/FlutterIconPicker/blob/master/assets/FlutterIconPicker.png)
 
-## Features
+## Options
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+| __Parameter__           | __Type__           | __Default__ | __Short description__                |
+| ----------------------- | ------------------ | ----------- | ------------------------------------- |
+| context | `BuildContext`     | `-`         | Required due to `showDialog`'s base. |
+| builder | `Function(BuildContext context)`     | `-`         | Required to build your child. |
+| shape | `ShapeBorder?`     | `RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0))`         | The desired shape of your dialog. |
+| constraints | `BoxConstraints?`     | `const BoxConstraints(maxHeight: 600, minWidth: 400, maxWidth: 720)`         | The max and min dimensions of your dialog. |
+| backgroundColor | `Color?`     | `Theme.of(context).dialogBackgroundColor`         | The main background color of your dialog. |
+| adaptive | `bool`     | `true`         | If adaptiveness should be applied. If not it only shows your content inside of an `AlertDialog`. |
+| barrierDismissible | `bool`     | `true`         | Whether users can dismiss your dialog by tapping outside the dialog. |
+| useSafeArea | `bool`     | `true`         | If `true` your whole dialog recognizes safe areas (could also lead to undesired layouts! Better use your own safe area widget inside your child!). |
+| filter | `ImageFilter?`     | `null`         | If you want to add a desired BackdropFilter, you can pass here your `ImageFilter` to do so. |
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use this package, add `adaptive_dialog` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/):
+
+```yaml
+dependencies:
+  adaptive_dialog: ^0.2.3
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Call `showAdaptiveDialog` with your desired type to return (if you want to return something).
 
 ```dart
-const like = 'sample';
+final result = await showAdaptiveDialog<String>(
+    context: context,
+    builder: (context) => SizedBox(
+    height: 400,
+    width: 600,
+    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+        const Text('Hello World'),
+        ElevatedButton(
+            onPressed: () => Navigator.pop(context, 'OK'),
+            child: const Text('OK'),
+        ),
+      ],
+    ),
+  ),
+);
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
