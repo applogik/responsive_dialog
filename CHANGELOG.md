@@ -1,3 +1,7 @@
+## 0.2.4
+
+* Expose several options to customize the `showDialog`
+
 ## 0.2.3
 
 * Fix generics for `showAdaptiveDialog`
