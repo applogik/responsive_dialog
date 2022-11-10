@@ -26,7 +26,7 @@ To use this package, add `responsive_dialog` as a [dependency in your pubspec.ya
 
 ```yaml
 dependencies:
-  responsive_dialog: ^0.2.3
+  responsive_dialog: ^0.2.4
 ```
 
 ## Usage

@@ -11,7 +11,12 @@ Future<T?> showResponsiveDialog<T>({
   Color? backgroundColor,
   bool adaptive = true,
   bool barrierDismissible = true,
+  Color? barrierColor = Colors.black54,
+  String? barrierLabel,
   bool useSafeArea = true,
+  bool useRootNavigator = true,
+  RouteSettings? routeSettings,
+  Offset? anchorPoint,
   ImageFilter? filter,
 }) async {
   if (constraints == null) {
@@ -32,6 +37,11 @@ Future<T?> showResponsiveDialog<T>({
     barrierDismissible: barrierDismissible,
     context: context,
     useSafeArea: useSafeArea,
+    useRootNavigator: useRootNavigator,
+    barrierColor: barrierColor,
+    barrierLabel: barrierLabel,
+    routeSettings: routeSettings,
+    anchorPoint: anchorPoint,
     builder: (BuildContext context) => DefaultDialog(
       adaptive: adaptive,
       barrierDismissible: barrierDismissible,
